@@ -41,6 +41,6 @@ def webp_decode():
 
 if __name__ == "__main__":
     im = Image.open(
-        '../CA_EntropyModel_Test_v2/examples/kodim01.png').convert("RGB")
+        '../CA_EntropyModel/examples/kodim01.png').convert("RGB")
     webp_encode(im)
     webp_decode()

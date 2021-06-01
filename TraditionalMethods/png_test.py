@@ -29,5 +29,5 @@ def png_encode(image):
 
 if __name__ == "__main__":
     im = Image.open(
-        '../CA_EntropyModel_Test_v2/examples/kodim01.png').convert("RGB")
+        '../CA_EntropyModel/examples/kodim01.png').convert("RGB")
     png_encode(im)
