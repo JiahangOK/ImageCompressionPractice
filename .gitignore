@@ -1,0 +1,6 @@
+CA_EntropyModel_Test_v2/models/
+TraditionalMethods/jpeg_compressed_files/
+TraditionalMethods/png_compressed_files/
+TraditionalMethods/webp_lossless_compressed_files/
+TraditionalMethods/webp_lossy_compressed_files/
+*.pyc
