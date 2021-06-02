@@ -7,7 +7,7 @@ import os
 import time
 
 def webp_encode(image):
-    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 98]
 
     for q in qualitys:
         dir = './webp_lossy_compressed_files/{}'.format(q)
@@ -24,11 +24,11 @@ def webp_encode(image):
         file_size = os.path.getsize(filepath) * 8
         bpp = file_size / size
         with open('./webp_lossy_compressed_files/bpp.txt', 'a+') as f:
-            f.write(str(bpp)+'\n')
+            f.write(str(bpp)+',')
         with open('./webp_lossy_compressed_files/time.txt', 'a+') as f:
-            f.write(str(end - start)+'\n')
+            f.write(str(end - start)+',')
 def webp_decode():
-    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 98]
 
     for q in qualitys:
         dir = './webp_lossy_compressed_files/{}'.format(q)

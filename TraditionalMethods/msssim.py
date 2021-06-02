@@ -203,7 +203,7 @@ def main(_):
     value = str(MultiScaleSSIM(img1, img2, max_val=255))
     print(value)
     with open(FLAGS.output_path, 'a+') as f:
-      f.write(value+'\n')
+      f.write(value+',')
 
 
 if __name__ == '__main__':

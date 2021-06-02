@@ -12,7 +12,7 @@ def webp_encode(image):
     # png
     filepath = "./webp_lossless_compressed_files/kodim01.webp"
     start = time.time()
-    image.save(filepath, "WEBP", lossless = True)
+    image.save(filepath, "WEBP", lossless = True, method=6)
     end = time.time()
 
     w, h = image.size

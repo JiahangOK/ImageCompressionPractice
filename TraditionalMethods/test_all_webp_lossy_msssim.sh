@@ -1,8 +1,11 @@
 #!/bin/bash  
+rm -rf output_webp.msssim
 
-for q in $(seq 1 9)  
+arr=(10 20 30 40 50 60 70 80 90 95 98)
+
+for q in ${arr[*]} 
 do
     num=`echo $q | awk '{printf("%d",$0)}'`
-    echo "file: ./webp_compressed_files/${q}0/kodim01.jpg msssim"
-    python msssim.py --original_image=../CA_EntropyModel_Test_v2/examples/kodim01.png --compared_image=./webp_compressed_files/${q}0/kodim01.png --output_path output_webp.msssim
+    echo "file: ./webp_compressed_files/${q}/kodim01.jpg msssim"
+    python msssim.py --original_image=../CA_EntropyModel/examples/kodim01.png --compared_image=./webp_lossy_compressed_files/${q}/kodim01.png --output_path output_webp.msssim
 done

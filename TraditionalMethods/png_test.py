@@ -13,7 +13,7 @@ def png_encode(image):
     filepath = "./png_compressed_files/kodim01.png"
     start = time.time()
 
-    image.save(filepath, "PNG")
+    image.save(filepath, "PNG", compress_level=0)
     end = time.time()
 
     w, h = image.size

@@ -7,7 +7,7 @@ import os
 import time
 
 def jpeg_encode(image):
-    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+    qualitys = [10, 20, 30, 40, 50, 60, 70, 80, 90, 95]
 
     for q in qualitys:
         dir = './jpeg_compressed_files/{}'.format(q)
@@ -24,9 +24,9 @@ def jpeg_encode(image):
         file_size = os.path.getsize(filepath) * 8
         bpp = file_size / size
         with open('./jpeg_compressed_files/bpp.txt', 'a+') as f:
-            f.write(str(bpp)+'\n')
+            f.write(str(bpp)+',')
         with open('./jpeg_compressed_files/time.txt', 'a+') as f:
-            f.write(str(end-start)+'\n')
+            f.write(str(end-start)+',')
 
 
 if __name__ == "__main__":
